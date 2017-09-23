@@ -1,0 +1,21 @@
+<?php
+return [
+	'a_success'=>'1000',
+	'a_validator_error'=>'1001',
+	'a_illegal_error'=>'1002',
+	'a_error'=>'1003',
+	'a_refused'=>'1015',
+	'a_no_login'=>'1016',
+	'h_success'=>'200',
+	'h_validator_error'=>'422',
+	'h_illegal_error'=>'406',
+	'h_error'=>'403',
+	'h_refused'=>'500',
+	'h_no_login'=>'401',
+	'o_success'=>'操作成功',
+	'o_validator_error'=>'验证失败',
+	'o_illegal_error'=>'非法操作',
+	'o_error'=>'操作失败',
+	'o_refused'=>'请求被拒',
+	'o_no_login'=>'未找到该数据'
+];
