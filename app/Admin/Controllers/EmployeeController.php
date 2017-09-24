@@ -11,6 +11,7 @@ use Encore\Admin\Controllers\ModelForm;
 use App\Models\Employee;
 use App\Models\Department;
 use App\Admin\Extensions\Tools\Synchronize;
+use Stoneworld\Wechat\Exception;
 use Stoneworld\Wechat\User;
 use Illuminate\Support\MessageBag;
 
@@ -32,6 +33,24 @@ class EmployeeController extends Controller
 
             $content->body($this->grid());
         });
+    }
+    public function destroy($id)
+    {
+        try{
+
+            $this->form()->destroy($id);
+            return response()->json([
+                'status'  => true,
+                'message' => trans('admin::lang.delete_succeeded'),
+            ]);
+        }catch (Exception $ex){
+
+            return response()->json([
+                'status'  => false,
+                'message' => $ex->getMessage(),
+            ]);
+        }
+
     }
 
     /**

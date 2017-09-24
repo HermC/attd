@@ -11,6 +11,7 @@ use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
 use App\Models\Department;
 use Encore\Admin\Tree;
+use Stoneworld\Wechat\Exception;
 use Stoneworld\Wechat\Group;
 use Illuminate\Support\MessageBag;
 use App\Admin\Extensions\Tools\Synchronize;
@@ -36,6 +37,23 @@ class DepartmentController extends Controller
         });
     }
 
+    public function destroy($id)
+    {
+        try{
+            $this->form()->destroy($id);
+            return response()->json([
+                'status'  => true,
+                'message' => trans('admin::lang.delete_succeeded'),
+            ]);
+        }catch (Exception $ex){
+
+            return response()->json([
+                'status'  => false,
+                'message' => $ex->getMessage(),
+            ]);
+        }
+
+    }
     /**
      * Edit interface.
      *

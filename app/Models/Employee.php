@@ -399,16 +399,16 @@ class Employee  extends Model
 			$deps = array_filter($vo["department"]);
             //dd($vo["department"]);
 			static::create([
-				"userid"=> $vo["userid"],
-				"name"=> $vo["name"],
-				"dep"=> $deps[count($deps)-1],
-				"department"=> implode(',',$deps), //implode(',' , $this->department)
-				"position"=> isset($vo["position"])?$vo["position"]:"",
-				"mobile"=> isset($vo["mobile"])?$vo["mobile"]:"",
-				"gender"=> $vo["gender"],
-				"email"=> isset($vo["email"])?$vo["email"]:"",
-				"weixinid"=> isset($vo["weixinid"])?$vo["weixinid"]:"",
-				//"avatar_mediaid"=> "2-G6nrLmr5EC3MNb_-zL1dDdzkd0p7cNliYu9V5w7o8K0",
+                    "userid"=> $vo["userid"],
+                    "name"=> $vo["name"],
+                    "dep"=> $deps[count($deps)-1],
+                    "department"=> implode(',',$deps), //implode(',' , $this->department)
+                    "position"=> isset($vo["position"])?$vo["position"]:"",
+                    "mobile"=> isset($vo["mobile"])?$vo["mobile"]:"",
+                    "gender"=> $vo["gender"],
+                    "email"=> isset($vo["email"])?$vo["email"]:"",
+                    "weixinid"=> isset($vo["weixinid"])?$vo["weixinid"]:"",
+                    //"avatar_mediaid"=> "2-G6nrLmr5EC3MNb_-zL1dDdzkd0p7cNliYu9V5w7o8K0",
 				]);
 			}	
 		}

@@ -40,7 +40,7 @@
 		      <div class="weui-msg__extra-area">
 		        <div class="weui-footer">
 		          <p class="weui-footer__links">
-		            <a href="javascript:void(0);" class="weui-footer__link">南京质检院</a>
+		            <a href="javascript:void(0);" class="weui-footer__link">南京标准院</a>
 		          </p>
 		          <p class="weui-footer__text">Copyright © 2107</p>
 		        </div>
